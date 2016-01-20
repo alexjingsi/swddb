@@ -194,8 +194,6 @@ class PosixWritableFile : public WritableFile {
       return IOError(filename_, errno);
     }
 
-    char msg[] = "Append!\n";
-    fwrite(msg, 1, sizeof(msg), stderr);
     return Status::OK();
   }
 
